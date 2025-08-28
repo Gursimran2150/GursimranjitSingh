@@ -713,6 +713,7 @@ export default function Portfolio() {
                   <img
                     src="/myimg.jpeg"
                     className="w-full h-full object-cover"
+                    alt="profile-pic"
                   />
                 </div>
               </div>
