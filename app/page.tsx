@@ -283,7 +283,10 @@ export default function Portfolio() {
         transition={{ duration: 0.5 }}
         className="flex justify-between items-center w-full h-20 text-white bg-black sticky top-0 px-4 z-50"
       >
-        <div className="flex items-center cursor-pointer"  onClick={() => scrollToSection('home')}>
+        <div
+          className="flex items-center cursor-pointer"
+          onClick={() => scrollToSection("home")}
+        >
           <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mr-3">
             <span className="text-white font-bold text-xl">GS</span>
           </div>
@@ -379,28 +382,49 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.9 }}
-              className="flex gap-4 mt-8"
+              className="flex flex-col sm:flex-row gap-4 mt-8"
             >
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="/resume.pdf"
-                download
-                className="group text-white px-8 py-4 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer duration-300 text-lg font-semibold"
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.9 }}
+                className="flex gap-4 mt-8"
               >
-                Download Resume
-                <span className="group-hover:rotate-90 duration-300 md:flex hidden">
-                  <MdOutlineKeyboardArrowRight className="ml-2" size={25} />
-                </span>
-              </motion.a>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection("contact")}
-                className="text-cyan-500 border-2 border-cyan-500 px-8 py-4 rounded-md hover:bg-cyan-500 hover:text-white duration-300 text-lg font-semibold"
-              >
-                Get In Touch
-              </motion.button>
+                <motion.a
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="/resume.pdf"
+                  download
+                  className="
+      group text-white 
+      px-5 py-2.5 text-sm   /* mobile (default) */
+      md:px-8 md:py-4 md:text-lg /* md and up */
+      flex items-center rounded-md 
+      bg-gradient-to-r from-cyan-500 to-blue-500 
+      cursor-pointer duration-300 font-semibold
+    "
+                >
+                  Download Resume
+                  <span className="group-hover:rotate-90 duration-300 md:flex hidden">
+                    <MdOutlineKeyboardArrowRight className="ml-2" size={25} />
+                  </span>
+                </motion.a>
+
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => scrollToSection("contact")}
+                  className="
+      text-cyan-500 border-2 border-cyan-500 
+      px-5 py-2.5 text-sm   /* mobile */
+      md:px-8 md:py-4 md:text-lg /* md and up */
+      rounded-md hover:bg-cyan-500 hover:text-white 
+      duration-300 font-semibold
+    "
+                >
+                  Get In Touch
+                </motion.button>
+              </motion.div>
             </motion.div>
           </div>
         </div>
