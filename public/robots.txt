@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gurxsingh.dev/sitemap.xml
