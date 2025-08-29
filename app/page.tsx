@@ -792,105 +792,272 @@ export default function Portfolio() {
             <p className="py-6">What people say about my work</p>
           </motion.div>
 
-          <div className="relative">
-            <motion.div
-              animate={{ x: [0, -100 * 4] }}
-              transition={{
-                duration: 20,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "linear",
-              }}
-              className="flex gap-8"
-              style={{ width: "200%" }}
-            >
-              {/* First set of recommendations */}
-              {[
-                {
-                  quote:
-                    "Gursimranjit is an exceptional developer who consistently delivers high-quality solutions. His expertise in full-stack development and attention to detail make him a valuable team member.",
-                  name: "Gautam Gupta",
-                  title: "Software Engineer",
-                  company: "Cropsly Solutions Private Limited",
-                },
-                {
-                  quote:
-                    "Working with Gursimranjit was a great experience. His technical skills and problem-solving abilities helped us deliver our project on time and exceed client expectations.",
-                  name: "Saurabh Mishra",
-                  title: "Backend Developer",
-                  company: "Cropsly Solutions Private Limited",
-                },
-                {
-                  quote:
-                    "Gursimranjit's dedication to clean code and best practices is remarkable. He brings innovative solutions to complex problems and is always willing to help team members.",
-                  name: "Prateek Bhandula",
-                  title: "SDE 2",
-                  company: "Idea Clan",
-                },
-                {
-                  quote:
-                    "His ability to work across the full stack while maintaining code quality is impressive. Gursimranjit is a reliable developer who delivers on promises.",
-                  name: "Gauri Chauhan",
-                  title: "IT Manager",
-                  company: "Care Health Insurance",
-                },
-              ]
-                .concat([
-                  {
-                    quote:
-                      "Gursimranjit is an exceptional developer who consistently delivers high-quality solutions. His expertise in full-stack development and attention to detail make him a valuable team member.",
-                    name: "Gautam Gupta",
-                    title: "Software Engineer",
-                    company: "Cropsly Solutions Private Limited",
-                  },
-                  {
-                    quote:
-                      "Working with Gursimranjit was a great experience. His technical skills and problem-solving abilities helped us deliver our project on time and exceed client expectations.",
-                    name: "Saurabh Mishra",
-                    title: "Backend Developer",
-                    company: "Cropsly Solutions Private Limited",
-                  },
-                  {
-                    quote:
-                      "Gursimranjit's dedication to clean code and best practices is remarkable. He brings innovative solutions to complex problems and is always willing to help team members.",
-                    name: "Prateek Bhandula",
-                    title: "SDE 2",
-                    company: "Idea Clan",
-                  },
-                  {
-                    quote:
-                      "His ability to work across the full stack while maintaining code quality is impressive. Gursimranjit is a reliable developer who delivers on promises.",
-                    name: "Gauri Chauhan",
-                    title: "IT Manager",
-                    company: "Care Health Insurance",
-                  },
-                ])
-                .map((rec, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{ scale: 1.02, zIndex: 10 }}
-                    className="bg-gray-900 p-6 rounded-lg shadow-lg flex-shrink-0 w-80 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300"
-                  >
-                    <div className="text-cyan-500 text-4xl mb-4">"</div>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                      {rec.quote}
-                    </p>
-                    <div className="flex items-center">
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        {rec.name
-                          .split(" ")
-                          .map((n) => n[0])
-                          .join("")}
-                      </div>
-                      <div className="ml-4">
-                        <p className="font-semibold text-sm">{rec.name}</p>
-                        <p className="text-gray-400 text-xs">{rec.title}</p>
-                        <p className="text-cyan-400 text-xs">{rec.company}</p>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-            </motion.div>
+          <div className="relative overflow-hidden">
+  <motion.div
+    animate={{ x: ["0%", "-100%"] }}
+    transition={{
+      duration: 40, // slower for smooth scrolling
+      repeat: Infinity,
+      ease: "linear",
+    }}
+    className="flex gap-8"
+  >
+    {[
+      {
+        quote:
+          "Gursimranjit has shown impressive skills in frontend development. His ability to understand requirements quickly and deliver efficiently makes him a great asset for any project.",
+        name: "Ashish Chaurasiya",
+        title: "Team Lead",
+        company: "Cropsly Solutions Private Limited",
+        linkedin: "https://www.linkedin.com/in/ashish-chaurasiya-13170116b/",
+      },
+      {
+        quote:
+          "His technical expertise and professionalism are remarkable. Gursimranjit delivers scalable solutions with attention to detail.",
+        name: "Akshat Mishra",
+        title: "Senior Software Engineer",
+        company: "Netsmartz",
+        linkedin: "https://www.linkedin.com/in/akshat-mishra-9903/",
+      },
+      {
+        quote:
+          "Gursimranjit is an exceptional developer who consistently delivers high-quality solutions. His expertise in frontend development and dedication make him a valuable colleague.",
+        name: "Gautam Gupta",
+        title: "Software Engineer",
+        company: "Cropsly Solutions Private Limited",
+        linkedin: "https://www.linkedin.com/in/gautam-gupta-791542243/",
+      },
+      {
+        quote:
+          "Working with Gursimranjit was a great experience. His problem-solving skills and backend collaboration helped us achieve success faster.",
+        name: "Saurabh Mishra",
+        title: "Backend Developer",
+        company: "Firmly",
+        linkedin: "https://www.linkedin.com/in/saurabh35/",
+      },
+      {
+        quote:
+          "He always brings fresh ideas and clean implementations. His dedication to writing maintainable code is inspiring.",
+        name: "Prateek Bhandula",
+        title: "SDE 2",
+        company: "Idea Clan",
+        linkedin: "https://www.linkedin.com/in/notprateeek/",
+      },
+      {
+        quote:
+          "Gursimranjit has the ability to bridge frontend and mobile teams smoothly. His skills have helped in delivering high quality apps and seamless user experiences.",
+        name: "Rahul Kumar",
+        title: "Senior App Developer",
+        company: "Cropsly Solutions Private Limited",
+        linkedin: "https://www.linkedin.com/in/rahul-kumar-mob-dev/",
+      },
+      {
+        quote:
+          "A sharp mind for backend integrations and a team player. Gursimranjit ensures frontend and backend sync perfectly.",
+        name: "Jatin Singh",
+        title: "Senior Backend Developer",
+        company: "—",
+        linkedin: "https://www.linkedin.com/in/jatinsin19/",
+      },
+      {
+        quote:
+          "He has a knack for problem-solving and ensuring efficient deliveries. It’s always a pleasure to collaborate with him.",
+        name: "Mohd Shadab",
+        title: "Software Engineer",
+        company: "Cropsly Solutions Private Limited",
+        linkedin: "https://www.linkedin.com/in/mohd-shadab-7648071ab/",
+      },
+      {
+        quote:
+          "His ability to work across the full stack while maintaining code quality is impressive. Gursimranjit is a reliable developer who delivers on promises.",
+        name: "Gauri Chauhan",
+        title: "IT Manager",
+        company: "Care Health Insurance",
+        linkedin: "https://www.linkedin.com/in/gauri-chauhann",
+      },
+    ]
+      // Duplicate once for smooth loop
+      .concat([
+        {
+          quote:
+            "Gursimranjit has shown impressive skills in frontend development. His ability to understand requirements quickly and deliver efficiently makes him a great asset for any project.",
+          name: "Ashish Chaurasiya",
+          title: "Team Lead",
+          company: "Cropsly Solutions Private Limited",
+          linkedin: "https://www.linkedin.com/in/ashish-chaurasiya-13170116b/",
+        },
+        {
+          quote:
+            "His technical expertise and professionalism are remarkable. Gursimranjit delivers scalable solutions with attention to detail.",
+          name: "Akshat Mishra",
+          title: "Senior Software Engineer",
+          company: "Netsmartz",
+          linkedin: "https://www.linkedin.com/in/akshat-mishra-9903/",
+        },
+        {
+          quote:
+            "Gursimranjit is an exceptional developer who consistently delivers high-quality solutions. His expertise in frontend development and dedication make him a valuable colleague.",
+          name: "Gautam Gupta",
+          title: "Software Engineer",
+          company: "Cropsly Solutions Private Limited",
+          linkedin: "https://www.linkedin.com/in/gautam-gupta-791542243/",
+        },
+        {
+          quote:
+            "Working with Gursimranjit was a great experience. His problem-solving skills and backend collaboration helped us achieve success faster.",
+          name: "Saurabh Mishra",
+          title: "Backend Developer",
+          company: "Firmly",
+          linkedin: "https://www.linkedin.com/in/saurabh35/",
+        },
+        {
+          quote:
+            "He always brings fresh ideas and clean implementations. His dedication to writing maintainable code is inspiring.",
+          name: "Prateek Bhandula",
+          title: "SDE 2",
+          company: "Idea Clan",
+          linkedin: "https://www.linkedin.com/in/notprateeek/",
+        },
+        {
+          quote:
+            "Gursimranjit has the ability to bridge frontend and mobile teams smoothly. His skills have helped in delivering high quality apps and seamless user experiences.",
+          name: "Rahul Kumar",
+          title: "Senior App Developer",
+          company: "Cropsly Solutions Private Limited",
+          linkedin: "https://www.linkedin.com/in/rahul-kumar-mob-dev/",
+        },
+        {
+          quote:
+            "A sharp mind for backend integrations and a team player. Gursimranjit ensures frontend and backend sync perfectly.",
+          name: "Jatin Singh",
+          title: "Senior Backend Developer",
+          company: "—",
+          linkedin: "https://www.linkedin.com/in/jatinsin19/",
+        },
+        {
+          quote:
+            "He has a knack for problem-solving and ensuring efficient deliveries. It’s always a pleasure to collaborate with him.",
+          name: "Mohd Shadab",
+          title: "Software Engineer",
+          company: "Cropsly Solutions Private Limited",
+          linkedin: "https://www.linkedin.com/in/mohd-shadab-7648071ab/",
+        },
+        {
+          quote:
+            "His ability to work across the full stack while maintaining code quality is impressive. Gursimranjit is a reliable developer who delivers on promises.",
+          name: "Gauri Chauhan",
+          title: "IT Manager",
+          company: "Care Health Insurance",
+          linkedin: "https://www.linkedin.com/in/gauri-chauhann",
+        },
+      ]) .concat([
+        {
+          quote:
+            "Gursimranjit has shown impressive skills in frontend development. His ability to understand requirements quickly and deliver efficiently makes him a great asset for any project.",
+          name: "Ashish Chaurasiya",
+          title: "Team Lead",
+          company: "Cropsly Solutions Private Limited",
+          linkedin: "https://www.linkedin.com/in/ashish-chaurasiya-13170116b/",
+        },
+        {
+          quote:
+            "His technical expertise and professionalism are remarkable. Gursimranjit delivers scalable solutions with attention to detail.",
+          name: "Akshat Mishra",
+          title: "Senior Software Engineer",
+          company: "Netsmartz",
+          linkedin: "https://www.linkedin.com/in/akshat-mishra-9903/",
+        },
+        {
+          quote:
+            "Gursimranjit is an exceptional developer who consistently delivers high-quality solutions. His expertise in frontend development and dedication make him a valuable colleague.",
+          name: "Gautam Gupta",
+          title: "Software Engineer",
+          company: "Cropsly Solutions Private Limited",
+          linkedin: "https://www.linkedin.com/in/gautam-gupta-791542243/",
+        },
+        {
+          quote:
+            "Working with Gursimranjit was a great experience. His problem-solving skills and backend collaboration helped us achieve success faster.",
+          name: "Saurabh Mishra",
+          title: "Backend Developer",
+          company: "Firmly",
+          linkedin: "https://www.linkedin.com/in/saurabh35/",
+        },
+        {
+          quote:
+            "He always brings fresh ideas and clean implementations. His dedication to writing maintainable code is inspiring.",
+          name: "Prateek Bhandula",
+          title: "SDE 2",
+          company: "Idea Clan",
+          linkedin: "https://www.linkedin.com/in/notprateeek/",
+        },
+        {
+          quote:
+            "Gursimranjit has the ability to bridge frontend and mobile teams smoothly. His skills have helped in delivering high quality apps and seamless user experiences.",
+          name: "Rahul Kumar",
+          title: "Senior App Developer",
+          company: "Cropsly Solutions Private Limited",
+          linkedin: "https://www.linkedin.com/in/rahul-kumar-mob-dev/",
+        },
+        {
+          quote:
+            "A sharp mind for backend integrations and a team player. Gursimranjit ensures frontend and backend sync perfectly.",
+          name: "Jatin Singh",
+          title: "Senior Backend Developer",
+          company: "—",
+          linkedin: "https://www.linkedin.com/in/jatinsin19/",
+        },
+        {
+          quote:
+            "He has a knack for problem-solving and ensuring efficient deliveries. It’s always a pleasure to collaborate with him.",
+          name: "Mohd Shadab",
+          title: "Software Engineer",
+          company: "Cropsly Solutions Private Limited",
+          linkedin: "https://www.linkedin.com/in/mohd-shadab-7648071ab/",
+        },
+        {
+          quote:
+            "His ability to work across the full stack while maintaining code quality is impressive. Gursimranjit is a reliable developer who delivers on promises.",
+          name: "Gauri Chauhan",
+          title: "IT Manager",
+          company: "Care Health Insurance",
+          linkedin: "https://www.linkedin.com/in/gauri-chauhann",
+        },
+      ])
+      .map((rec, index) => (
+        <motion.a
+          key={index}
+          whileHover={{ scale: 1.02, zIndex: 10 }}
+          href={rec.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gray-900 p-6 rounded-lg shadow-lg flex-shrink-0 w-80 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300"
+        >
+          <div className="text-cyan-500 text-4xl mb-4">"</div>
+          <p className="text-gray-300 mb-4 text-sm leading-relaxed">{rec.quote}</p>
+          <div className="flex items-center">
+            <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+              {rec.name
+                .split(" ")
+                .map((n) => n[0])
+                .join("")}
+            </div>
+            <div className="ml-4">
+              <p className="font-semibold text-sm">{rec.name}</p>
+              <p className="text-gray-400 text-xs">{rec.title}</p>
+              <div
+               
+                className="text-cyan-400 text-xs hover:underline"
+              >
+                {rec.company}
+              </div>
+            </div>
           </div>
+        </motion.a>
+      ))}
+  </motion.div>
+</div>
+
         </div>
       </section>
 
@@ -989,6 +1156,7 @@ export default function Portfolio() {
                 whileHover={{ scale: 1.2, color: "#06b6d4" }}
                 href="https://www.linkedin.com/in/gursimranjit-singh-bb3a98234"
                 target="_blank"
+                aria-label="Linkedin"
                 rel="noreferrer"
                 className="text-gray-400 hover:text-cyan-500 transition-colors duration-300"
               >
@@ -998,6 +1166,7 @@ export default function Portfolio() {
                 whileHover={{ scale: 1.2, color: "#06b6d4" }}
                 href="https://www.github.com/gursimran2150"
                 target="_blank"
+                aria-label="Github"
                 rel="noreferrer"
                 className="text-gray-400 hover:text-cyan-500 transition-colors duration-300"
               >
@@ -1006,6 +1175,7 @@ export default function Portfolio() {
               <motion.a
                 whileHover={{ scale: 1.2, color: "#06b6d4" }}
                 href="mailto:thegursimranjit@gmail.com"
+                aria-label="Mail"
                 className="text-gray-400 hover:text-cyan-500 transition-colors duration-300"
               >
                 <HiOutlineMail size={24} />
